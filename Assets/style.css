@@ -1,0 +1,80 @@
+* {
+    font-family: Helvetica, sans-serif;
+    color: black;
+}
+
+:root {
+    --btn_color: rgb(93, 0, 150);
+    --btn_hover_color: rgb(147, 32, 255);
+}
+
+html {
+    height: 100%;
+}
+
+.top header {
+    float: left;
+}
+
+.top header a {
+    display: inline-block;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.top nav {
+    float: right;
+}
+
+.top div {
+    display: inline-block;
+    font-size: 18px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.challenge {
+    text-align: center;
+    margin-left: 260px;
+    margin-right: 260px;
+    padding-top: 100px;
+    display: none;
+}
+
+.challenge div h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.challenge div a {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#buttonStart, 
+#button1, 
+#button2, 
+#button3, 
+#button4{
+    color: white;
+    background-color: var(--btn_color);
+    border-color: var(--btn_color);
+    border-radius: 5px;
+    border: none;
+    padding: 7px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#buttonStart:hover, 
+#button1:hover, 
+#button2:hover, 
+#button3:hover, 
+#button4:hover{
+    background-color: var(--btn_hover_color);
+    border-color: var(--btn_hover_color);
+}
