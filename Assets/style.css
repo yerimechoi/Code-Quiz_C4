@@ -39,6 +39,7 @@ html {
     margin-left: 190px;
     margin-right: 190px;
     padding-top: 100px;
+    display: none;
 }
 
 .challenge div h1 {
@@ -70,6 +71,7 @@ html {
     margin-left: 260px;
     margin-right: 260px;
     padding-top: 100px;
+    display: none;
 }
 
 .questionContainer {
@@ -93,6 +95,7 @@ html {
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: none;
 }
 
 #buttonStart:hover, 
@@ -107,8 +110,9 @@ html {
 
 .answer{
     margin-top: 7px;
-    border-top: 1px solid grey;
+    border-top: 2px solid rgb(179, 179, 179);
     padding-top: 7px;
+    display: none;
 }
 
 .highscorePage {
@@ -116,4 +120,13 @@ html {
     margin-left: 190px;
     margin-right: 190px;
     padding-top: 100px;
+    display: block;
+}
+
+.finish {
+    text-align: center;
+    margin-left: 190px;
+    margin-right: 190px;
+    padding-top: 100px;
+    display: none;
 }
