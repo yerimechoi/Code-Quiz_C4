@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="./Assets/style.css"/>
+        <title>Coding Quiz</title>
+    </head>
+
+    <body>
+        <!--Header-->
+        <div class="top">
+            <header>
+                <a href="highscores">View Highscores</a>
+            </header>
+            <nav class="timer">
+                <div id="timeSet">Time:</div>
+                <div id="secondsLeft">75</div>
+            </nav>
+        </div>
+
+        <!--Start-->
+        <div class="challenge">
+            <div>
+                <h1>Coding Quiz Challenge</h1>
+                <p>Try to answer the following code-related questions withtin the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
+            </div>
+            <div>
+                <a href="quiz">
+                    <button id="buttonStart">Start Quiz</button>
+                </a>
+            </div>
+        </div>
+
+        <!--Quiz-->
+        <div>
+            <div class="questionContainer" id="question">
+            </div>
+
+            <div class="multipleChoice">
+                <button class="option" id="button1">option1</button>
+                <button class="option" id="button2">option2</button>
+                <button class="option" id="button3">option3</button>
+                <button class="option" id="button4">option4</button>
+            </div>
+        </div>
+    
+        <script src="./Assets/script.js"></script>
+    </body>
+</html>
