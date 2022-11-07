@@ -30,13 +30,13 @@ var btn3 = document.querySelector("#button3");
 var btn4 = document.querySelector("#button4");
 
 function startQuiz(){
+    question++;
     questionText.textContent = listOfQuestions[question].question;
     btn1.textContent = listOfQuestions[question].multipleChoice[0];
     btn2.textContent = listOfQuestions[question].multipleChoice[1];
     btn3.textContent = listOfQuestions[question].multipleChoice[2];
     btn4.textContent = listOfQuestions[question].multipleChoice[3];
 
-    question++;
     if(question < listOfQuestions.length){
         startQuiz();
     } else {
@@ -47,7 +47,6 @@ function startQuiz(){
 var checkAnswer = querySelector(".answer");
 
 function check(){
-    line
 }
 
 var questionContainer = document.querySelector(".questionContainer");
@@ -78,6 +77,7 @@ function setTimer(){
 }
 
 //tell the user if the answer was correct or not
+//add or subtract time accordingly
 //save user's answer in storage
 //once clicked on answer, move to next question
 //game over page

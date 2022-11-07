@@ -9,7 +9,7 @@
     <body>
         <!--Header-->
         <div class="top">
-            <header>
+            <header class="highscore">
                 <a href="highscores">View Highscores</a>
             </header>
             <nav class="timer">
@@ -25,25 +25,32 @@
                 <p>Try to answer the following code-related questions withtin the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</p>
             </div>
             <div>
-                <a href="quiz">
-                    <button id="buttonStart">Start Quiz</button>
-                </a>
+                <button id="buttonStart">Start Quiz</button>
             </div>
         </div>
 
         <!--Quiz-->
-        <div>
-            <div class="questionContainer" id="question">
+        <div class="quizFramework">
+            <div class="questionContainer">
+                <h2 class="questionText"></h2>
             </div>
 
-            <div class="multipleChoice">
-                <button class="option" id="button1">option1</button>
-                <button class="option" id="button2">option2</button>
-                <button class="option" id="button3">option3</button>
-                <button class="option" id="button4">option4</button>
+            <div class="answerContainer">
+                <button class="option" id="button1"></button>
+                <button class="option" id="button2"></button>
+                <button class="option" id="button3"></button>
+                <button class="option" id="button4"></button>
+                <p class="answer"></p>
             </div>
         </div>
     
+        <!--Highscore-->
+        <div class="highscorePage">
+            <h1>Highscores</h1>
+            <div>
+                <ul id="userContainer"></ul>
+            </div>
+        </div>
         <script src="./Assets/script.js"></script>
     </body>
 </html>
