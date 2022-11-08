@@ -24,12 +24,12 @@ var listOfQuestions = [
         answer: "4. console.log"
     }
 ]
+// var btn1 = document.querySelector("#button1");
+// var btn2 = document.querySelector("#button2");
+// var btn3 = document.querySelector("#button3");
+// var btn4 = document.querySelector("#button4");
 
 var questionText = document.querySelector(".questionText");
-var btn1 = document.querySelector("#button1");
-var btn2 = document.querySelector("#button2");
-var btn3 = document.querySelector("#button3");
-var btn4 = document.querySelector("#button4");
 
 var timerEl = document.querySelector(".timer");
 var timer = document.querySelector("#secondsLeft");
@@ -49,6 +49,11 @@ function setTimer(){
 console.log(secondsLeft);
 
 function startQuiz(){
+    var btn1 = document.querySelector("#button1");
+    var btn2 = document.querySelector("#button2");
+    var btn3 = document.querySelector("#button3");
+    var btn4 = document.querySelector("#button4");
+
     quizPage.style.display = "block";
     infoPage.style.display = "none";
     highscorePage.style.display = "none";
@@ -64,26 +69,35 @@ function startQuiz(){
     btn2.textContent = listOfQuestions[question].multipleChoice[1];
     btn3.textContent = listOfQuestions[question].multipleChoice[2];
     btn4.textContent = listOfQuestions[question].multipleChoice[3];
+    console.log(btn1);
 }
 
 var check = document.querySelector(".answer");
 var correct = 0;
 var incorrect = 0;
 
-function checkAnswer(){
+function checkAnswer(event){
+    console.log(event.target);
     if (listOfQuestions[question].answer === listOfQuestions[question].multipleChoice){
         correct++;
         check.style.display = "block";
         check.textContent = "Correct! :)";
+        nextQuestion();
     } else {
         incorrect++;
         check.style.display = "block";
         check.textContent = "Incorrect! :(";
+        nextQuestion();
     }
-    nextQuestion();
+    // nextQuestion();
 }
 
 function nextQuestion(){
+    var btn1 = document.querySelector("#button1");
+    var btn2 = document.querySelector("#button2");
+    var btn3 = document.querySelector("#button3");
+    var btn4 = document.querySelector("#button4");
+
     quizPage.style.display = "block";
     infoPage.style.display = "none";
     highscorePage.style.display = "none";
@@ -110,7 +124,6 @@ var highscorePage = document.querySelector(".highscorePage");
 var startBtn = document.querySelector("#buttonStart");
 var highscore = document.querySelector(".highscore");
 
-//tell the user if the answer was correct or not
 //add or subtract time accordingly
 //save user's answer in storage
 //once clicked on answer, move to next question
@@ -118,6 +131,9 @@ var highscore = document.querySelector(".highscore");
 
 var endPage = document.querySelector(".finish");
 var endOfGame = document.querySelector(".done");
+
+var count = document.querySelector(".count");
+
 
 function gameOver(){
     endPage.style.display = "block";
@@ -127,29 +143,28 @@ function gameOver(){
     endOfGame.textContent = "Game Over"
 }
 
-function enterName(){
 
-}
+
 
 startBtn.addEventListener("click", function(){
     setTimer();
 });
 
-btn1.addEventListener("click", function(){
-    checkAnswer();
-})
+// btn1.addEventListener("click", function(e){
+//     checkAnswer(e);
+// })
 
-btn2.addEventListener("click", function(){
-    checkAnswer();
-})
+// btn2.addEventListener("click", function(e){
+//     checkAnswer(e);
+// })
 
-btn3.addEventListener("click", function(){
-    checkAnswer();
-})
+// btn3.addEventListener("click", function(e){
+//     checkAnswer(e);
+// })
 
-btn4.addEventListener("click", function(){
-    checkAnswer();
-})
+// btn4.addEventListener("click", function(e){
+//     checkAnswer(e);
+// })
 
 highscore.addEventListener("click", function(){
     highscorePage.style.display = "block";

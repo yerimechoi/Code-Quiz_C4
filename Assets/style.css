@@ -39,7 +39,7 @@ html {
     margin-left: 190px;
     margin-right: 190px;
     padding-top: 100px;
-    display: none;
+    display: block;
 }
 
 .challenge div h1 {
@@ -120,7 +120,7 @@ html {
     margin-left: 190px;
     margin-right: 190px;
     padding-top: 100px;
-    display: block;
+    display: none;
 }
 
 .finish {
