@@ -1,4 +1,3 @@
-//questions
 var question = -1;
 var listOfQuestions = [
     {
@@ -78,7 +77,7 @@ var incorrect = 0;
 
 function checkAnswer(event){
     console.log(event.target);
-    if (listOfQuestions[question].answer === listOfQuestions[question].multipleChoice){
+    if (listOfQuestions[question].answer === userChoice){
         correct++;
         check.style.display = "block";
         check.textContent = "Correct! :)";
@@ -114,14 +113,18 @@ function nextQuestion(){
     btn4.textContent = listOfQuestions[question].multipleChoice[3];
 }
 
+var userChoice;
 var questionContainer = document.querySelector(".questionContainer");
 var answerContainer = document.querySelector(".answerContainer");
 var userContainer = document.querySelector("#userContainer");
 
+function storeAnswers(){
+    
+}
+
 var quizPage = document.querySelector(".quizFramework");
 var infoPage = document.querySelector(".challenge");
 var highscorePage = document.querySelector(".highscorePage");
-var startBtn = document.querySelector("#buttonStart");
 var highscore = document.querySelector(".highscore");
 
 //add or subtract time accordingly
@@ -144,7 +147,7 @@ function gameOver(){
 }
 
 
-
+var startBtn = document.querySelector("#buttonStart");
 
 startBtn.addEventListener("click", function(){
     setTimer();
