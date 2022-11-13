@@ -124,14 +124,30 @@ function nextQuestion(){
         save_btn.setAttribute("id", "save_btn");
         save_btn.textContent = "Submit";
         save_btn.addEventListener("click", function(event){
-            console.log(event.target);
-            console.log(document.getElementById("user_initials").value);
+            let username = document.getElementById("user_initials").value;
+            save_localStorage(username);
         })
         parentDiv.append(initial_para, initial_input, save_btn);
         initialPage.append(score_para, parentDiv);
     }
 }
 
+let scoreData = JSON.parse(localStorage.getItem("score"));
+
+function save_localStorage(username){
+    let user_score_details = {
+        username: username,
+        score: finalScore
+    }
+    if (scoreData === null){
+        scoreData = [];
+        scoreData.push(user_score_details);
+    }else{
+        scoreData.push(user_score_details);
+    };
+
+    localStorage.setItem("score", JSON.stringify(scoreData));
+}
 var quizPage = document.querySelector(".quizFramework");
 var infoPage = document.querySelector(".challenge");
 var highscorePage = document.querySelector(".highscorePage");
@@ -151,8 +167,4 @@ highscore.addEventListener("click", function(){
     highscorePage.style.display = "block";
     timer.style.display = "none";
     infoPage.style.display = "none";
-    quizPage.style.display = "none";
-    highscore.style.display = "none";
-    endPage.style.display = "none";
-    //shows previous user's scores, etc.
 })
