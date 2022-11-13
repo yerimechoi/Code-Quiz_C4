@@ -74,6 +74,14 @@ html {
     display: none;
 }
 
+.initialPage {
+    text-align: center;
+    margin-left: 260px;
+    margin-right: 260px;
+    padding-top: 100px;
+    display: none;
+}
+
 .questionContainer {
     margin-bottom: 40px;
 }
@@ -106,6 +114,10 @@ html {
 #button5:hover{
     background-color: var(--btn_hover_color);
     border-color: var(--btn_hover_color);
+}
+
+#save_btn{
+    background-color: var(--btn_color);
 }
 
 .answer{
