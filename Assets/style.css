@@ -133,7 +133,21 @@ html {
     transition: all 0.3s ease;
 }
 
-#back_btn, 
+#back_btn{
+    color: white;
+    background-color: var(--btn_color);
+    border-color: var(--btn_color);
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 5px;
+    padding: 7px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    margin-left: 40px;
+}
+
 #clear_btn{
     color: white;
     background-color: var(--btn_color);
@@ -146,7 +160,7 @@ html {
     cursor: pointer;
     transition: all 0.3s ease;
     margin-right: 10px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 #final_btn{
@@ -185,7 +199,7 @@ html {
 #final_scores li {
     font-size: 20px;
     margin-bottom: 5px;
-    padding-right: 250px;
+    padding-right: 275px;
     color: black;
     background-color: var(--user);
     text-align: left;
