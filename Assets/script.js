@@ -93,6 +93,7 @@ function checkAnswer(event) {
     } else {
         check.style.display = "block";
         check.textContent = "Incorrect! :(";
+        secondsLeft -=10;
         nextQuestion();
     };
 };
