@@ -6,6 +6,7 @@
 :root {
     --btn_color: rgb(93, 0, 150);
     --btn_hover_color: rgb(147, 32, 255);
+    --user: rgb(225, 194, 255);
 }
 
 html {
@@ -111,13 +112,45 @@ html {
 #button2:hover, 
 #button3:hover, 
 #button4:hover,
-#button5:hover{
+#button5:hover,
+#submit_btn:hover,
+#back_btn:hover,
+#clear_btn:hover{
     background-color: var(--btn_hover_color);
     border-color: var(--btn_hover_color);
 }
 
-#save_btn{
+#submit_btn{
+    color: white;
     background-color: var(--btn_color);
+    border-color: var(--btn_color);
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 5px;
+    padding: 7px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#back_btn, 
+#clear_btn{
+    color: white;
+    background-color: var(--btn_color);
+    border-color: var(--btn_color);
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 5px;
+    padding: 7px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+#final_btn{
+    display: flex;
 }
 
 .answer{
@@ -141,4 +174,28 @@ html {
     margin-right: 190px;
     padding-top: 100px;
     display: none;
+}
+
+#input {
+    display: flex;
+    float: center;
+    margin-left: 100px;
+}
+
+#final_scores li {
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding-right: 250px;
+    color: black;
+    background-color: var(--user);
+    text-align: left;
+}
+
+.highscore_pg {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: underline;
 }

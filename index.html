@@ -10,7 +10,7 @@
         <!--Header-->
         <div class="top">
             <header class="highscore">
-                <a href="highscores">View Highscores</a>
+                <button class ="highscore_pg">View Highscores</button>
             </header>
             <nav class="timer">
                 <div id="timeSet">Time:</div>
@@ -46,14 +46,24 @@
 
         <!--Initials-->
         <div class="initialPage">
-            <h1>All done!</h1>
+            <h1 id="initial">All done!</h1>
+            <h3 id="user_score"></h3>
+
+            <div id="input">
+                <h5>Enter initials:
+                    <input id="user_initials">
+                    <button id="submit_btn">Submit</button>
+                </h5>
+            </div>
         </div>
 
         <!--Highscore-->
         <div class="highscorePage">
             <h1>Highscores</h1>
-            <div>
-                <input id="userInitials"></input>
+            <div id="final_scores"></div>
+            <div id="final_btn">
+                <button id="back_btn" onclick="location.href='index.html';">Go Back</button>
+                <button id="clear_btn">Clear Highscores</button>
             </div>
         </div>
 
